@@ -1,8 +1,30 @@
 import logo from "../assets/images/logo.png";
-import { NavLink} from "react-router-dom";
-import { useSelector } from "react-redux";
+import { NavLink, useNavigate} from "react-router-dom";
+import { useSelector } from "react-redux";  
+import { getAuth,signOut } from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { cleanuser } from "../Redux/authslice";
+
+
 const navbar=()=>{
   const cart=useSelector((state)=>state.cart.cart);
+  const Authuser = useSelector((state)=>state.authstate.user);
+  const navigate = useNavigate();
+  const dispatch=useDispatch();
+  const auth = getAuth();
+  const logout=()=>{
+    signOut(auth).then(() => {
+  dispatch(cleanuser())
+    }).catch((error) => {
+    
+    });
+  }
+
+  const signup=()=>{
+navigate("/login");
+  }
+
+
     return(
 
         <>
@@ -24,14 +46,14 @@ const navbar=()=>{
         <span className=""> </span>
       </button>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav">
+        <ul className="navbar-nav align-items-center">
           <li className="nav-item">
             <NavLink to="/" className="nav-link">
               Home <span className="sr-only">(current)</span>
             </NavLink>
           </li>
           <li className="nav-item dropdown">
-            <NavLink to="/testimonial"
+            <NavLink to="/product"
               className="nav-link dropdown-toggle"
               href="#"
               data-toggle="dropdown"
@@ -41,20 +63,20 @@ const navbar=()=>{
             >
               {" "}
               <span className="nav-label">
-                Testimonial
+                Products
               </span>
             </NavLink>
           
           </li>
           <li className="nav-item">
-            <NavLink to="/product" className="nav-link">
-              Products
-            </NavLink>
-          </li>
-          <li className="nav-item">
             <NavLink to="/contact" className="nav-link">
               Contact
             </NavLink>
+          </li>
+          <li className="nav-item">
+            {
+              Authuser ?  <button className="login" onClick={logout}>Logout</button> : <button className="login" onClick={signup}>Signup</button> 
+            }
           </li>
           <li className="nav-item  relative">
             <NavLink to="/cart" className="nav-link">

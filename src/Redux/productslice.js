@@ -20,8 +20,8 @@ const productslice=createSlice({
 })
 
 export const fetchProduct=createAsyncThunk("product/fetchproduct",async()=>{
-    const res = await axios.get('https://api.escuelajs.co/api/v1/products');
-        return res.data;
+    const res = await axios.get('https://dummyjson.com/products');
+        return res.data.products;
 })
 
 export default productslice.reducer;

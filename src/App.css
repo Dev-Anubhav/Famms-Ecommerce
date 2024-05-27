@@ -1,0 +1,26 @@
+.signup-card{padding: 50px; margin-top: 4rem; border-radius: 5px; box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;}
+ 
+
+.signup-card h4{font-size: 1.5rem; margin: 0 5px;   text-align: center; margin-bottom: 2rem; cursor: pointer;}
+
+.signup-card input{padding: 10px;  font-size: .9rem; margin-bottom: 20px; width: 100%; border: none;  border-bottom: 2px solid black; outline: none; background: transparent;}
+
+.signup-card input::placeholder{font-size: .8rem;}
+
+.signup-card button{padding: 10px 15px; width: 100%; border: none; font-weight: 600; border-radius: 2px; color: white; background: #f7444e; margin-top: 10px;}
+
+.signup-card .login p{font-size: .7rem; text-align: center; margin-top: 10px;}
+
+.signup-card .login a{font-weight: 600; cursor: pointer; font-size: .8rem;}
+.signup-card .register-type{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.light{color: #a1a1a1;}
+.dark{color: #f7444e;}
+
+.localguest{display: flex; align-items: center; justify-content: center; flex-flow: column wrap; margin-top: 5px;}
+.localguest .Or{font-size: .7rem;}
+.localguest .anonymous{font-size: .8rem;}
+.localguest .guest{font-size: 1rem; font-weight: 500; cursor: pointer; margin-left: 2px; color: #003459;}

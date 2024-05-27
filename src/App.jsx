@@ -5,6 +5,7 @@ import Products from "./Components/product";
 import Cart from "./Components/Cart"
 import Contact from "./Components/Contact"
 import Testi from "./Components/testimonial";
+import Login from "./Components/login"
 
 import './App.css'
 
@@ -20,6 +21,8 @@ function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/testimonial" element={<Testi />}/>
+      <Route path="/login" element={<Login />}/>
+     
     </Routes>
 
     </BrowserRouter>

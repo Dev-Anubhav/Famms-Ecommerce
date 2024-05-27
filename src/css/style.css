@@ -1139,3 +1139,18 @@ form input[type="submit"]:focus {
 .relative:hover .absolute{
   color: black;
 }
+
+.login{
+  padding: 12px 25px;
+  background-color: #f7444e;
+  border: 1px solid #f7444e;
+  color: #ffffff;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-weight: 700;
+}
+.login:hover{
+  background-color: transparent;
+  color: #f7444e;
+}
