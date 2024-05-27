@@ -1,5 +1,5 @@
 import logo from "../assets/images/logo.png";
-import { NavLink, useNavigate} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import { useSelector } from "react-redux";  
 import { getAuth,signOut } from "firebase/auth";
 import { useDispatch } from "react-redux";
@@ -31,9 +31,9 @@ navigate("/login");
         <header className="header_section">
   <div className="container">
     <nav className="navbar navbar-expand-lg custom_nav-container ">
-      <NavLink to="/"   className="navbar-brand">
-        <img width={250} src={logo} alt="" />
-      </NavLink>
+      <Link to="/"   className="navbar-brand">
+        <img width={200} src={logo} alt="" />
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -48,30 +48,22 @@ navigate("/login");
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav align-items-center">
           <li className="nav-item">
-            <NavLink to="/" className="nav-link">
+            <Link to="/" className="nav-link">
               Home <span className="sr-only">(current)</span>
-            </NavLink>
+            </Link>
           </li>
-          <li className="nav-item dropdown">
-            <NavLink to="/product"
-              className="nav-link dropdown-toggle"
-              href="#"
-              data-toggle="dropdown"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="true"
+          <li className="nav-item">
+            <Link to="/product"
+              className="nav-link"
             >
-              {" "}
-              <span className="nav-label">
                 Products
-              </span>
-            </NavLink>
+            </Link>
           
           </li>
           <li className="nav-item">
-            <NavLink to="/contact" className="nav-link">
+            <Link to="/contact" className="nav-link">
               Contact
-            </NavLink>
+            </Link>
           </li>
           <li className="nav-item">
             {
@@ -79,7 +71,7 @@ navigate("/login");
             }
           </li>
           <li className="nav-item  relative">
-            <NavLink to="/cart" className="nav-link">
+            <Link to="/cart" className="nav-link">
               <svg
                 version="1.1"
                 id="Capa_1"
@@ -134,7 +126,7 @@ navigate("/login");
                 <g></g>
               </svg>
               <span className="absolute">{cart.length}</span>
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </div>

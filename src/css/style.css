@@ -134,6 +134,12 @@ a:focus {
   font-family: 'Playfair Display', serif;
 }
 
+.navbar-brand img{
+  max-width: 100%;
+  height: auto;
+}
+
+
 .navbar-brand span {
   font-weight: bold;
   font-size: 32px;
