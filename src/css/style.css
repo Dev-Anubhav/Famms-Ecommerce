@@ -308,8 +308,12 @@ a:focus {
 }
 
 .slider_section .img-box img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
+
+
 
 .slider_section .carousel-indicators {
   position: unset;
@@ -353,6 +357,12 @@ a:focus {
      object-fit: cover;
   -o-object-position: top right;
      object-position: top right;
+}
+
+@media screen and (max-width: 600px) {
+  .slider_bg_box img{
+    display: none;
+  }
 }
 
 .product_section .heading_container {
@@ -550,6 +560,11 @@ a:focus {
     object-fit: cover;
     -o-object-position: top left;
     object-position: top left;
+}
+@media screen and (max-width:700px) {
+  .arrival_section .arrival_bg_box img {
+    display: none;
+  }
 }
 
 .arrival_section a {
