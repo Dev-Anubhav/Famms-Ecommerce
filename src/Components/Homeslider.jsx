@@ -1,6 +1,7 @@
 import sliderbg from "../assets/images/slider-bg.jpg";
 import { useNavigate } from "react-router-dom";
 
+
 const homeslider=()=>{
   const navi = useNavigate();
     return(
