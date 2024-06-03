@@ -1,4 +1,4 @@
-import sliderbg from "../assets/images/slider-bg.jpg";
+import sliderbg from "../assets/images/slider-bg (1).webp";
 import { useNavigate } from "react-router-dom";
 
 

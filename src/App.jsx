@@ -2,10 +2,10 @@ import Navbar from "./Components/navbar";
 import Home from "./Components/Home";
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Products from "./Components/product";
-import Cart from "./Components/Cart"
-import Contact from "./Components/Contact"
+import Cart from "./Components/Cart";
+import Contact from "./Components/Contact";
 import Testi from "./Components/testimonial";
-import Login from "./Components/login"
+import Login from "./Components/login";
 
 import './App.css'
 

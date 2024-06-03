@@ -1,4 +1,4 @@
-import arr from "../assets/images/arrival-bg.png"
+import arr from "../assets/images/arrival-bg (1).webp";
 const arrival=()=>{
     return(
         <>

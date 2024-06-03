@@ -20,7 +20,7 @@ const productslice=createSlice({
 })
 
 export const fetchProduct=createAsyncThunk("product/fetchproduct",async()=>{
-    const res = await axios.get('https://dummyjson.com/products');
+    const res = await axios.get('https://dummyjson.com/products?limit=100');
         return res.data.products;
 })
 
